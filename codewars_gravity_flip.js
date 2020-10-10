@@ -20,7 +20,17 @@ flip('R', [3, 2, 1, 2])     =>  [1, 2, 2, 3]
 flip('L', [1, 4, 5, 3, 5])  =>  [5, 5, 4, 3, 1]
 */
 
-const flip=(d, a)=>{
-  //TODO
-  return 
+const flip = (d, a) => {
+  let array;
+  if(d === 'R') {
+    array = a.sort(function(a, b) {
+      return a - b;
+    });
+  } else {
+    array = a.sort(function(a, b) {
+      return b - a;
+    });
+  }
+
+  return array;
 }
